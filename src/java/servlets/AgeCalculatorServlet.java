@@ -23,6 +23,11 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
         String age = request.getParameter("age");        
         request.setAttribute("age", age);
         
+        if(age== null || age.equals("0")){
+                 getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp").
+                forward(request, response);
+                 return;
+            }
         getServletContext().getRequestDispatcher("/WEB-INF/agedisplay.jsp")
                 .forward(request, response);
    }
