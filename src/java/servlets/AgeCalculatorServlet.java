@@ -28,7 +28,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
                 forward(request, response);
                  return;
             }
-        getServletContext().getRequestDispatcher("/WEB-INF/agedisplay.jsp")
+        getServletContext().getRequestDispatcher("/WEB-INF/agecalculator.jsp")
                 .forward(request, response);
    }
 
